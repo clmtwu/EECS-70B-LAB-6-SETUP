@@ -42,10 +42,13 @@ took roughly 20 minutes to download everything on lab room wifi
 
 ## **Step 3: Proceed As Normal! (Using the Lab Handout)**
 Follow the Lab Handout and connect all the wires together to the machines. Beware that some wires may be faulty or the connection may be unstable at your ports. I will include some personal notes here:
+- **RUN ALL APPLICATIONS AS ADMINISTRATOR**, especially the KeySight Command Expert. If you ever get issues involving some codes not being resolved when you are trying to connect probes, this is the reason why. look up how to run applications if you do not know how to do so, you'll use it a fair bit in the future!
 - I used the most recent version of SIC Expert and it could automatically detect the usb ports when connected. For reference, I currently run an overheating i7-12700H, 16 GB RAM, Windows 11. 
 - If your IO Libraries Suite does NOT launch, uninstall and reinstall. It's the fastest way to resolve the issue (yes, the uninstaller will appear to be not working but it does work. it just takes a long time due to the recursive uninstalling of dependency programs). restart your laptop when done (and whenever you follow a step and don't see a fix. nothing broke on my end when i restarted)
 - I used a VSCode setup with MATLAB support and did NOT use IDLE. IDLE issues can/should be resolved by asking LLM's for advice.
 - **It is in my humble opinion to skip** the "Sending commands to the AFG" section of the report. The methods/functions needed do not translate well to pure python code and doesn't paste properly.
+
+
 
 ## **Step 4: Updating Given Code**
 The given code in the Lab Handout is as follows:

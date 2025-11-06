@@ -20,7 +20,12 @@ took roughly 20 minutes to download everything on lab room wifi
 
 ## **Step 2: Commands**
 1. Open up Powershell or Command Prompt (this has only been verified with Command Prompt, so translate all commands to Powershell if you choose to use it)
-2. type 
-> pip install pyvisa-py 
-    OR
-> pip install pyvisa depending on your version
+2. type:
+```
+pip install pyvisa-py 
+```
+OR
+```
+pip install pyvisa 
+```
+depending on your version

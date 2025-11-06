@@ -29,11 +29,15 @@ pip install pyvisa-py
 pip install pyvisa 
 ```
 depending on your version. you can check whether it works or not by going to and downloading test.py in this repository
+
 3. type:
-'''
+
+```
 py -m pip install matplotlib
-'''
+```
+
 if you haven't already from the prelab! thank you to (discord: @maanya)
+
 4. you MAY need to pip install other dependencies depending on errors if they show up in your terminal. doing so is fairly easy: simply look up the errors requiring some "pip install ..." and install said package. I believe I installed 2 more packages, but I have no idea if they are used/needed/work.
 
 ## **Step 3: Proceed As Normal! (Using the Lab Handout)**
@@ -45,7 +49,7 @@ Follow the Lab Handout and connect all the wires together to the machines. Bewar
 
 ## **Step 4: Updating Given Code**
 The given code in the Lab Handout is as follows:
-'''
+```
 import pyvisa
 import time
 import math
@@ -59,7 +63,7 @@ gen = rm.open_resource('...)
 
 print(gen.query("*IDN?))
 print(scope.query("*IDN?))
-'''
+```
 
 where i recommend to change (as per standard python convention AND for readability):
 rm to resource_manager
@@ -67,22 +71,24 @@ scope to oscilloscope
 gen to function_generator
 
 if your ResourceManager throws errors of "no modules named ..." and/or "no backend available", you are using pure python backend instead of ni's. tell pyvisa to use it! change:
-'''
+```
 rm = pyvisa.ResourceManager()
-'''
+```
     to:
-'''
+```
 rm = pyvisa.ResourceManager( insert ni-visa address here )
-'''
+```
     in this case, my location was at 'C:\\Windows\\System32\\visa32.dll'. This address may change for different systems. In my case, this becomes:
-'''
+```
 rm = pyvisa.ResourceManager('C:\\Windows\\System32\\visa32.dll')
-'''
+```
 
 find the IP Addresses of the rm.open_resource to respective IP Addresses of function_generator and oscilloscope. if it looks something like "USB0::0x1AB1::0x0610::HDO1B26BM00073::INSTR", you're on the right track! it must match word for word, bar for bar.
 
 
 ## **Step 5: Running Code**
 Check the Canvas for code attachments (or download the two 70lb.py files I have included in this repository) and they should work "beautifully".
+
 Alternatively, if you would like to check out my code (or any part of my setup), see lab6.py in this repository. I was the only one ~~dumb enough~~ to code my own solution (that does not work as well as the canvas ones)
+
 ~~not noticing these two files took 2 hours away from our lives~~

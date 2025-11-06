@@ -74,11 +74,19 @@ if your ResourceManager throws errors of "no modules named ..." and/or "no backe
 ```python
 rm = pyvisa.ResourceManager()
 ```
+
+
     to:
+
+
 ```python
 rm = pyvisa.ResourceManager( insert ni-visa address here )
 ```
+
+
     in this case, my location was at 'C:\\Windows\\System32\\visa32.dll'. This address may change for different systems. In my case, this becomes:
+
+    
 ```python
 rm = pyvisa.ResourceManager('C:\\Windows\\System32\\visa32.dll')
 ```

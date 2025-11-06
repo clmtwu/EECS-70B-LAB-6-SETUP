@@ -6,14 +6,14 @@ last updated: FA 2025 (11/05/2025)
 @author: clement wu (discord: @citru | email @ ciwu@.uci.edu)
 
 ## **Step 0: Hardware**
-This lab replaces ethernet cables with type A to B USB Ports, so no need for a lan/ethernet port as required in the lab. Only required ports are 2 USB-A ports to read both the oscilloscope and the function generator
+This lab replaces ethernet cables with type A to B USB Ports, so no need for a lan/ethernet port as required in the lab. Only required ports are 2 USB-A ports to read both the oscilloscope and the function generator.
 
 ## **Step 1: Downloads and Extracts**
 
 1. Download [IO Libraries Suite](https://www.keysight.com/us/en/lib/software-detail/computer-software/io-libraries-suite-downloads-2175637.html), scroll down for download. This SHOULD cover prerequisites, so no need to install it. I personally used SIC Expert.
-2. Download [Command Expert](https://www.keysight.com/us/en/lib/software-detail/computer-software/command-expert-downloads-2151326.html), scroll down for download
-3. Download [NI-VISA](https://www.ni.com/en/support/downloads/drivers/download.ni-visa.html#575764) **not optional** since it is the python backend required by pyvisa to communicate via usb ports. pip installing "libusb" and "pyusb" for install doesn't seem to work well, so I did not bother. **yes, you need to make an account, the email NEEDS to be verified, will take FIFTEEN minutes to install fully, and will take up significant storage**
-4. Download [Python 3.13.0](https://www.python.org/downloads/release/python-3130/) **python is not backwards compatable**, as in 3.14 will NOT work with 3.13. You must install THIS specific python version
+2. Download [Command Expert](https://www.keysight.com/us/en/lib/software-detail/computer-software/command-expert-downloads-2151326.html), scroll down for download.
+3. Download [NI-VISA](https://www.ni.com/en/support/downloads/drivers/download.ni-visa.html#575764) **not optional** since it is the python backend required by pyvisa to communicate via usb ports. pip installing "libusb" and "pyusb" for install doesn't seem to work well, so I did not bother. **yes, you need to make an account, the email NEEDS to be verified, will take FIFTEEN minutes to install fully, and will take up significant storage.**
+4. Download [Python 3.13.0](https://www.python.org/downloads/release/python-3130/). **Python is not backwards compatable**, as in 3.14 will NOT work with 3.13. You must install THIS specific python version
 
 took roughly 20 minutes to download everything on lab room wifi
 
@@ -21,22 +21,22 @@ took roughly 20 minutes to download everything on lab room wifi
 ## **Step 2: Commands**
 1. Open up Powershell or Command Prompt (this has only been verified with Command Prompt, so translate all commands to Powershell if you choose to use it)
 2. type:
-```
-pip install pyvisa-py 
-```
-    OR
-```
-pip install pyvisa 
-```
-depending on your version. you can check whether it works or not by going to and downloading test.py in this repository
+    ```bash
+    pip install pyvisa-py 
+    ```
+    **OR**
+    ```bash
+    pip install pyvisa 
+    ```
+    depending on your version. you can check whether it works or not by going to and downloading test.py in this repository
 
 3. type:
 
-```
-py -m pip install matplotlib
-```
+    ```bash
+    py -m pip install matplotlib
+    ```
 
-if you haven't already from the prelab! thank you to (discord: @maanya)
+    if you haven't already from the prelab! thank you to (discord: @maanya)
 
 4. you MAY need to pip install other dependencies depending on errors if they show up in your terminal. doing so is fairly easy: simply look up the errors requiring some "pip install ..." and install said package. I believe I installed 2 more packages, but I have no idea if they are used/needed/work.
 
@@ -92,3 +92,5 @@ Check the Canvas for code attachments (or download the two 70lb.py files I have 
 Alternatively, if you would like to check out my code (or any part of my setup), see lab6.py in this repository. I was the only one ~~dumb enough~~ to code my own solution (that does not work as well as the canvas ones)
 
 ~~not noticing these two files took 2 hours away from our lives~~
+
+## **END**
